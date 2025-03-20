@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Floor Management</title>
+    <link rel="stylesheet" href="../style/homepage.css">
+</head>
+<body>
+    <header>
+        <h1>Hospital Bed Management</h1>
+    </header>
+    
+    <div class="container">
+        <div class="floor-selector">
+            <button class="floor-btn active" data-floor="1">Floor 1</button>
+            <button class="floor-btn" data-floor="2">Floor 2</button>
+            <button class="floor-btn" data-floor="3">Floor 3</button>
+            <button class="floor-btn" data-floor="4">Floor 4</button>
+            <button class="floor-btn" data-floor="5">Floor 5</button>
+        </div>
+        
+        <div class="floor-header">
+            <h2>Floor 1</h2>
+            <div class="floor-stats">
+                <div class="stat">
+                    <div class="stat-value occupied">14</div>
+                    <div>Occupied</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value available">6</div>
+                    <div>Available</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="floor-layout" id="floor-1">
+            <!-- Row 1 -->
+            <div class="bed" onclick="location.href='patient.html?id=P1001'">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 101</div>
+                <div class="patient-id">P1001</div>
+            </div>
+            
+            <div class="bed vacant">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 102</div>
+            </div>
+            
+            <div class="bed" onclick="location.href='patient.html?id=P1002'">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 103</div>
+                <div class="patient-id">P1002</div>
+            </div>
+            
+            <div class="bed" onclick="location.href='patient.html?id=P1003'">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 104</div>
+                <div class="patient-id">P1003</div>
+            </div>
+            
+            <!-- Row 2 -->
+            <div class="bed" onclick="location.href='patient.html?id=P1004'">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 105</div>
+                <div class="patient-id">P1004</div>
+            </div>
+            
+            <div class="bed vacant">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 106</div>
+            </div>
+            
+            <div class="bed" onclick="location.href='patient.html?id=P1005'">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 107</div>
+                <div class="patient-id">P1005</div>
+            </div>
+            
+            <div class="bed vacant">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 108</div>
+            </div>
+            
+            <!-- Row 3 -->
+            <div class="bed" onclick="location.href='patient.html?id=P1006'">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 109</div>
+                <div class="patient-id">P1006</div>
+            </div>
+            
+            <div class="bed" onclick="location.href='patient.html?id=P1007'">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 110</div>
+                <div class="patient-id">P1007</div>
+            </div>
+            
+            <div class="bed" onclick="location.href='patient.html?id=P1008'">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 111</div>
+                <div class="patient-id">P1008</div>
+            </div>
+            
+            <div class="bed" onclick="location.href='patient.html?id=P1009'">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 112</div>
+                <div class="patient-id">P1009</div>
+            </div>
+            
+            <!-- Row 4 -->
+            <div class="bed vacant">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 113</div>
+            </div>
+            
+            <div class="bed" onclick="location.href='patient.html?id=P1010'">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 114</div>
+                <div class="patient-id">P1010</div>
+            </div>
+            
+            <div class="bed" onclick="location.href='patient.html?id=P1011'">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 115</div>
+                <div class="patient-id">P1011</div>
+            </div>
+            
+            <div class="bed vacant">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 116</div>
+            </div>
+            
+            <!-- Row 5 -->
+            <div class="bed" onclick="location.href='patient.html?id=P1012'">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 117</div>
+                <div class="patient-id">P1012</div>
+            </div>
+            
+            <div class="bed" onclick="location.href='patient.html?id=P1013'">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 118</div>
+                <div class="patient-id">P1013</div>
+            </div>
+            
+            <div class="bed vacant">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 119</div>
+            </div>
+            
+            <div class="bed" onclick="location.href='patient.html?id=P1014'">
+                <img src="/Details/singlebed.jpg" alt="Hospital Bed">
+                <div class="room-number">Room 120</div>
+                <div class="patient-id">P1014</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Floor switching functionality
+        const floorButtons = document.querySelectorAll('.floor-btn');
+        const floorHeader = document.querySelector('.floor-header h2');
+        
+        floorButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                floorButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Update floor header
+                const floorNumber = button.getAttribute('data-floor');
+                floorHeader.textContent = `Floor ${floorNumber}`;
+                
+                // In a real application, you would load the beds for this floor
+                // For now, we'll just simulate it
+                console.log(`Loading beds for floor ${floorNumber}`);
+            });
+        });
+    </script>
+</body>
+</html>

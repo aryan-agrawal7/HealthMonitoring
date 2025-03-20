@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Details</title>
+    <link rel="stylesheet" href="../style/patient.css">
+</head>
+<body>
+    <header>
+        <h1>Patient Dashboard</h1>
+    </header>
+    
+    <div class="container">
+        <a href="homepage.html" class="back-link">
+            <span class="arrow-left">←</span> Back to Floor View
+        </a>
+        
+        <div class="patient-header">
+            <div class="patient-avatar">JS</div>
+            <div class="patient-info">
+                <h2 class="patient-name">John Smith</h2>
+                <div class="patient-details">
+                    <div class="patient-detail">
+                        <span class="patient-detail-label">Patient ID:</span>
+                        <span>P1001</span>
+                    </div>
+                    <div class="patient-detail">
+                        <span class="patient-detail-label">Age:</span>
+                        <span>58</span>
+                    </div>
+                    <div class="patient-detail">
+                        <span class="patient-detail-label">Room:</span>
+                        <span>101</span>
+                    </div>
+                    <div class="patient-detail">
+                        <span class="patient-detail-label">Admitted:</span>
+                        <span>Mar 18, 2025</span>
+                    </div>
+                    <div class="patient-detail">
+                        <span class="patient-detail-label">Attending:</span>
+                        <span>Dr. Sarah Johnson</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dashboard">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Health Vitals</h3>
+                    <span style="color: var(--gray);">Last updated: 1 hour ago</span>
+                </div>
+                <div class="vital-signs">
+                    <div class="vital">
+                        <div class="vital-name">Heart Rate</div>
+                        <div class="vital-value normal">78</div>
+                        <div class="vital-unit">bpm</div>
+                        <div class="vital-time">09:45 AM</div>
+                    </div>
+                    <div class="vital">
+                        <div class="vital-name">Blood Pressure</div>
+                        <div class="vital-value normal">128/82</div>
+                        <div class="vital-unit">mmHg</div>
+                        <div class="vital-time">09:45 AM</div>
+                    </div>
+                    <div class="vital">
+                        <div class="vital-name">SpO2</div>
+                        <div class="vital-value normal">97</div>
+                        <div class="vital-unit">%</div>
+                        <div class="vital-time">09:45 AM</div>
+                    </div>
+                    <div class="vital">
+                        <div class="vital-name">Temperature</div>
+                        <div class="vital-value warning">38.2</div>
+                        <div class="vital-unit">°C</div>
+                        <div class="vital-time">09:45 AM</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Medications</h3>
+                    <span style="color: var(--gray);">4 active medications</span>
+                </div>
+                <ul class="medication-list">
+                    <li class="medication-item">
+                        <div class="medication-info">
+                            <div class="medication-name">Amoxicillin</div>
+                            <div class="medication-details">
+                                <div class="medication-dosage">500mg</div>
+                                <div class="medication-schedule">3x daily</div>
+                            </div>
+                        </div>
+                        <div class="medication-status">
+                            <div class="medication-last recent">Last: 1 hour ago</div>
+                            <div class="medication-next">Next: 1:00 PM</div>
+                        </div>
+                    </li>
+                    <li class="medication-item">
+                        <div class="medication-info">
+                            <div class="medication-name">Lisinopril</div>
+                            <div class="medication-details">
+                                <div class="medication-dosage">10mg</div>
+                                <div class="medication-schedule">1x daily</div>
+                            </div>
+                        </div>
+                        <div class="medication-status">
+                            <div class="medication-last recent">Last: 3 hours ago</div>
+                            <div class="medication-next">Next: Tomorrow 8:00 AM</div>
+                        </div>
+                    </li>
+                    <li class="medication-item">
+                        <div class="medication-info">
+                            <div class="medication-name">Ibuprofen</div>
+                            <div class="medication-details">
+                                <div class="medication-dosage">400mg</div>
+                                <div class="medication-schedule">As needed</div>
+                            </div>
+                        </div>
+                        <div class="medication-status">
+                            <div class="medication-last">Last: 5 hours ago</div>
+                            <div class="medication-next due">Next: Available now</div>
+                        </div>
+                    </li>
+                    <li class="medication-item">
+                        <div class="medication-info">
+                            <div class="medication-name">Metformin</div>
+                            <div class="medication-details">
+                                <div class="medication-dosage">850mg</div>
+                                <div class="medication-schedule">2x daily</div>
+                            </div>
+                        </div>
+                        <div class="medication-status">
+                            <div class="medication-last overdue">Last: 9 hours ago</div>
+                            <div class="medication-next overdue">Next: Overdue</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="dashboard">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Recent Notes</h3>
+                </div>
+                <div style="color: var(--gray-dark);">
+                    <p><strong>Mar 19, 2025 - 10:30 AM - Dr. Sarah Johnson</strong></p>
+                    <p>Patient reports reduced pain following antibiotic treatment initiation. Still experiencing mild fever and discomfort. Continuing current treatment plan, will reassess tomorrow morning.</p>
+                    
+                    <p><strong>Mar 18, 2025 - 2:15 PM - Dr. Sarah Johnson</strong></p>
+                    <p>Admission for pneumonia. Started on amoxicillin 500mg three times daily. Metformin continued for pre-existing diabetes. Blood pressure slightly elevated, started on low-dose lisinopril. Will monitor closely for next 48 hours.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Upcoming Care</h3>
+                </div>
+                <div>
+                    <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid var(--gray-light);">
+                        <div>
+                            <div style="font-weight: 500;">Blood Test</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-dark);">
