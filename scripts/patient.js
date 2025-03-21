@@ -1,44 +1,34 @@
-// Replace with your actual ThingSpeak details
-var CHANNEL_ID = "2885794";  // Your ThingSpeak Channel ID
-var FIELD_NUMBER = "1";  // Field to subscribe to
-var READ_API_KEY = "AGYJOGI7MKWKC9WE";  // Not needed for MQTT, but useful for HTTP requests
-// ThingSpeak MQTT Broker details
-var MQTT_BROKER = "mqtt3.thingspeak.com";
-var MQTT_PORT = 80;  // WebSockets Port
-var MQTT_PATH = "/mqtt";
-var MQTT_USERNAME = "MhwFIjkzJw4XDAwKDi4sDxU";  // Your Account API Key (not Read API Key)
-var MQTT_PASSWORD = "ymTCsJ/3AdGJIeEGVlvzlao6";  // Your MQTT API Key
+const mqtt = require("mqtt");
 
-// Generate a unique MQTT client ID
-var MQTT_CLIENT_ID = "MhwFIjkzJw4XDAwKDi4sDxU";
-// Create MQTT client
-var MQTT_CLIENT = new Paho.MQTT.Client(MQTT_BROKER, MQTT_PORT, MQTT_PATH, MQTT_CLIENT_ID);
+const CHANNEL_ID = "2885794";
+const MQTT_USERNAME = "OjkPIC48PR4QJCMVBhkZLAM";
+const MQTT_PASSWORD = "9AXunB529V4pNFVXyBtxZyiE";
+const CLIENT_ID = "OjkPIC48PR4QJCMVBhkZLAM";
 
-// Define callback when message arrives
-MQTT_CLIENT.onMessageArrived = function (message) {
-    console.log("Received MQTT Message:", message.payloadString);
-    document.getElementById("data").innerText = "Latest Data: " + message.payloadString;
-};
+const broker = "mqtt://mqtt3.thingspeak.com:1883"; // Use MQTT (not WebSockets)
+const topic = `channels/${CHANNEL_ID}/subscribe/fields/field1`;
 
-// Connect to MQTT Broker
-MQTT_CLIENT.connect({
-    onSuccess: onConnect,
-    onFailure: onFailure,
-    userName: MQTT_USERNAME,
-    password: MQTT_PASSWORD
+const client = mqtt.connect(broker, {
+    username: MQTT_USERNAME,
+    password: MQTT_PASSWORD,
+    clientId: CLIENT_ID
 });
 
-// Function called when connected
-function onConnect() {
-    console.log("Connected to ThingSpeak MQTT Broker");
+client.on("connect", () => {
+    console.log("Connected to ThingSpeak MQTT!");
+    client.subscribe(topic, (err) => {
+        if (!err) {
+            console.log(`Subscribed to ${topic}`);
+        }
+    });
+});
 
-    // Subscribe to ThingSpeak field topic
-    var topic = "channels/" + CHANNEL_ID + "/subscribe/fields/field" + FIELD_NUMBER;
-    MQTT_CLIENT.subscribe(topic);
-    console.log("Subscribed to: " + topic);
-}
+client.on("message", (receivedTopic, message) => {
+    if (receivedTopic === topic) {
+        console.log("Received:", message.toString());
+    }
+});
 
-// Function called when connection fails
-function onFailure(response) {
-    console.log("Connection failed: " + response.errorMessage);
-}
+client.on("error", (err) => {
+    console.error("Connection error:", err);
+});
