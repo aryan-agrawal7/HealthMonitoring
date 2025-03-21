@@ -46,7 +46,7 @@ try:
         else:
             print("Failed to publish message:", mqtt.error_string(result.rc))
         # ThingSpeak free accounts allow one update every 15 seconds.
-        time.sleep(15)
+        time.sleep(5)
 except KeyboardInterrupt:
     print("Terminated by user.")
 finally:
